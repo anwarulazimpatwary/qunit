@@ -107,7 +107,13 @@ var QUnit = {
 				callback.call(testEnvironment);
 			} catch(e) {
 				fail("Test " + name + " died, exception and test follows", e, callback);
-				QUnit.ok( false, "Died on test #" + (config.assertions.length + 1) + ": " + e.message );
+				var message;
+				if (e.message) {
+					message = e.message;					
+				} else {
+					message = JSON.stringify(e);
+				}
+				QUnit.ok( false, "Died on test #" + (config.assertions.length + 1) + ": " + message );
 				// else next test will carry the responsibility
 				saveGlobal();
 
