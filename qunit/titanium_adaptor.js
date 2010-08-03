@@ -9,18 +9,18 @@ var logger = function(failures, message) {
 };
 // QUnit.testStart(name) is called whenever a new test batch of assertions starts running. name is the string name of the test batch.
 QUnit.testStart = function(name) {
-	logger(false, '>>TEST START: '+name);
+	logger(false, '>> >> >>TEST START: '+name);
 };
 // QUnit.testDone(name, failures, total) is called whenever a batch of assertions finishes running. name is the string name of the test batch. failures is the number of test failures that occurred. total is the total number of test assertions that occurred.
 QUnit.testDone = function(name, failures, total) {
-	logger(failures, '<<TEST DONE : '+name+' FAILURES: '+failures+' out of TOTAL: '+total);
+	logger(failures, '<< << <<TEST DONE : '+name+' FAILURES: '+failures+' out of TOTAL: '+total);
 };
 // QUnit.moduleStart(name) is called whenever a new module of tests starts running. name is the string name of the module.
 QUnit.moduleStart = function(name) {
 	logger(false, '>> >>MODULE START: '+name);
 };
 // QUnit.moduleDone(name, failures, total) is called whenever a module finishes running. name is the string name of the module. failures is the number of module failures that occurred. total is the total number of module assertions that occurred.
-QUnit.testDone = function(name, failures, total) {
+QUnit.moduleDone = function(name, failures, total) {
 	logger(failures, '<< <<MODULE DONE : '+name+' FAILURES: '+failures+' out of TOTAL: '+total);
 };
 // QUnit.begin() is called once before running any tests. It should have been called QUnit.start, but thats already in use elsewhere and can't be changed.
