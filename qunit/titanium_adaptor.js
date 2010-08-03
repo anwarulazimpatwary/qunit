@@ -1,5 +1,15 @@
 Titanium.include('qunit/qunit.js');
 
+// =============================================================================
+// Uncomment the following lines in order to get jsMockito support for mocking 
+// (after following jsMockito install instructions)
+// =============================================================================
+
+// Titanium.include('qunit/jshamcrest.js');
+// Titanium.include('qunit/jsmockito-1.0.2.js');
+// JsHamcrest.Integration.QUnit();
+// JsMockito.Integration.importTo(this);
+
 var logger = function(failures, message) {
 	if (failures) {
 		Titanium.API.error(message);		

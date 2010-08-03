@@ -14,6 +14,8 @@ Place tests_to_run.js, test.js and same.js in the Resources/test directory. You 
 
 Add the app.js_snippet to your app.js (assuming you are using tabGroups, otherwise you will have to find another way).
 
+For mocking, I've tested jsMockito support. Follow the instructions to install jsMockito (http://chrisleishman.github.com/jsmockito/) and uncomment the lines in titanium_adaptor.js (correcting the subdirectories, etc. on the way).
+
 Disclaimer
 ==========
 This is a work in progress. Please comment with any issues you are having.
