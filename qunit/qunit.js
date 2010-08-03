@@ -296,9 +296,9 @@ var QUnit = {
 		}
 	},
 
-	start: function() {
+	start: function(run_sync) {
 		// A slight delay, to avoid any current callbacks
-		if ( window.setTimeout ) {
+		if ( window.setTimeout && !run_sync) {
 			window.setTimeout(function() {
 				if ( config.timeout ) {
 					clearTimeout(config.timeout);
@@ -555,7 +555,7 @@ addEvent(window, "load", function() {
 	}
 
 	if (config.autostart) {
-		QUnit.start();
+		QUnit.start(true);
 	}
 });
 

@@ -1,0 +1,19 @@
+This is the very first stab at getting qunit to work in Titanium.
+
+The qunit.js file has been patched so most tests run. However, one test is failing even though there does not seem to be a problem.
+
+The great thing is that this supports asynch tests, though I haven't done too much yet with it.
+
+Install
+=======
+Place runner.js in your Resources directory.
+
+Place qunit.js and titanium_adaptor.js in Resources/qunit
+
+Place tests_to_run.js, test.js and same.js in the Resources/test directory. You will modify this tests_to_run.js to include your tests.
+
+Add the app.js_snippet to your app.js (assuming you are using tabGroups, otherwise you will have to find another way).
+
+Disclaimer
+==========
+This is a work in progress. Please comment with any issues you are having.
